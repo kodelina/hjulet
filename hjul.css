@@ -40,7 +40,11 @@
       background-color: #67BEEB;
     }
     body.home {
-      background:url(http://www.tromsfylke.no/samiskhistorie/images/fiskemottak.jpg);
+      background:url(images/skjermsparer2.jpg);
+      background-size:100%;
+    }
+    body.januar {
+      background:url(images/forberedelse_lofotfiske.jpg);
       background-size:100%;
     }
     .wrapper {
