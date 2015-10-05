@@ -1,0 +1,30 @@
+/* Animations */
+@keyframes scale {
+	25% { 
+		-webkit-transform: scale(0.8); 
+	}
+	50% { 
+		-webkit-transform: scale(1); 
+	}
+	75% { 
+		-webkit-transform: scale(0.8); 
+	}
+	100% { 
+		-webkit-transform: scale(1); 
+	}
+}
+
+@keyframes scalee {
+	15% { 
+		-webkit-transform: scale(1); 
+	}
+	50% { 
+		-webkit-transform: scale(0.8); 
+	}
+	75% { 
+		-webkit-transform: scale(1); 
+	}
+	100% { 
+		-webkit-transform: scale(0.8); 
+	}
+}
