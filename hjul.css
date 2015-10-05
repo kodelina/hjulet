@@ -119,7 +119,7 @@
         background: url(images/bubble1.svg) no-repeat;
         width: 294px;
         height: 307px;
-        animation: scale ease 25s infinite;
+        animation: scale ease 20s infinite;
         top: 116px;
         left: 249px;
     }
@@ -129,7 +129,7 @@
         width: 365px;
         height: 428px;
         -webkit-transform: scale(0.8);
-        animation: scalee ease 25s infinite;
+        animation: scalee ease 10s infinite;
         top: 63px;
         left: 1127px;
         padding-top: 120px;
@@ -141,7 +141,8 @@
         height: 373px;
         top: 658px;
         left: 264px;
-        animation: scale ease 25s infinite;
+        -webkit-transform: scale(0.8);
+        animation: scalee ease 15s infinite;
         padding-top: 150px;
         padding-left: 30px;
     }
