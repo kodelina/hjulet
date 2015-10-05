@@ -128,10 +128,10 @@
         background: url(images/bubble2.svg) no-repeat;
         width: 365px;
         height: 428px;
-        -webkit-transform: scale(0.8);
+        -webkit-transform: scale(0.9);
         animation: scalee ease 10s infinite;
         top: 63px;
-        left: 1127px;
+        left: 1000px;
         padding-top: 120px;
         font-size:2.2rem;
     }
@@ -139,9 +139,9 @@
         background: url(images/bubble3.svg) no-repeat;
         width: 390px;
         height: 373px;
-        top: 658px;
-        left: 264px;
-        -webkit-transform: scale(0.8);
+        top: 450px;
+        left: 204px;
+        -webkit-transform: scale(0.9);
         animation: scalee ease 15s infinite;
         padding-top: 150px;
         padding-left: 30px;
@@ -150,14 +150,13 @@
         background: url(images/bubble4.svg) no-repeat;
         width: 361px;
         height: 426px;
-        top: 557px;
-        left: 1474px;
+        top: 500px;
+        left: 1304px;
         animation: scale ease 25s infinite;
         padding-top: 190px;
     }
     aside {
       background: url(images/panel.png) no-repeat;
-      color: #fff;
       width: 872px;
       margin-left: -55%;
       float: left;

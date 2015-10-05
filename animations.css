@@ -1,13 +1,13 @@
 /* Animations */
 @keyframes scale {
 	25% { 
-		-webkit-transform: scale(0.8); 
+		-webkit-transform: scale(0.9); 
 	}
 	50% { 
 		-webkit-transform: scale(1); 
 	}
 	75% { 
-		-webkit-transform: scale(0.8); 
+		-webkit-transform: scale(0.9); 
 	}
 	100% { 
 		-webkit-transform: scale(1); 
@@ -19,12 +19,12 @@
 		-webkit-transform: scale(1); 
 	}
 	50% { 
-		-webkit-transform: scale(0.8); 
+		-webkit-transform: scale(0.9); 
 	}
 	75% { 
 		-webkit-transform: scale(1); 
 	}
 	100% { 
-		-webkit-transform: scale(0.8); 
+		-webkit-transform: scale(0.9); 
 	}
 }
