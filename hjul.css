@@ -39,6 +39,7 @@
       height: 90%;
       background-color: #67BEEB;
     }
+    /* Bakgrunner for måneder */
     body.home {
       background:url(images/skjermsparer2.jpg);
       background-size:100%;
@@ -46,6 +47,9 @@
     body.januar {
       background:url(images/forberedelse_lofotfiske.jpg);
       background-size:100%;
+    }
+    body.spinning {
+        background-color: #355077;
     }
     .wrapper {
       height: 100%;
@@ -62,6 +66,20 @@
       content: '';
       display: table;
     }
+    /* Hjul - animasjon */
+    .spin {
+        padding-top: 44px;
+        width:  992px;
+        height: 992px;
+        margin: 0 auto;
+    }
+    .spin img {
+        -webkit-animation-name:             rotate; 
+        -webkit-animation-duration:         6s; 
+        -webkit-animation-iteration-count:  infinite;
+        -webkit-animation-timing-function: linear;
+    }
+    /* Meny for språk */
     .menu {
         position: absolute;
         top: 30px;
@@ -95,6 +113,7 @@
         background-image: url(images/language_kv.svg);
         background-size: cover;
     }
+    /* Bobler på åpningsskjerm */
     .bubbles {
         margin:0;
         padding:0;
@@ -155,6 +174,7 @@
         animation: scale ease 25s infinite;
         padding-top: 190px;
     }
+    /* Tekstpanel */
     aside {
       background: url(images/panel.png) no-repeat;
       width: 872px;
@@ -163,6 +183,7 @@
       height: 100%;
       position: fixed;
       z-index: 1;
+      -webkit-transition: margin 0.2s ease-in-out;
     }
     .objectText {
         position: absolute;
@@ -222,11 +243,4 @@
       display: block;
     }
 
-    aside, section {
-      -webkit-transition: margin 0.2s ease-in-out;
-      -moz-transition: margin 0.2s ease-in-out;
-      -ms-transition: margin 0.2s ease-in-out;
-      -o-transition: margin 0.2s ease-in-out;
-      transition: margin 0.2s ease-in-out;
-    }
 
