@@ -77,7 +77,7 @@
         -webkit-animation-name:             rotate; 
         -webkit-animation-duration:         6s; 
         -webkit-animation-iteration-count:  infinite;
-        -webkit-animation-timing-function: linear;
+        -webkit-animation-timing-function:  linear;
     }
     /* Meny for språk */
     .menu {
@@ -90,29 +90,36 @@
     .menu li {
         float: left;
         margin-right: 30px;
+    }
+    .menu li a {
+        display: block;
         width: 58px;
         height: 61px;
     }
-    li.home {
+    a.home {
         background-image: url(images/home.svg);
         background-size: cover;
     }
-    li.no {
+    a#lang-no {
         background-image: url(images/language_no.svg);
         background-size: cover;
     }
-    li.en {
+    a#lang-en {
         background-image: url(images/language_en.svg);
         background-size: cover;
     }
-    li.sa {
+    a#lang-sa {
         background-image: url(images/language_sa.svg);
         background-size: cover;
     }
-    li.kv {
+    a#lang-kv {
         background-image: url(images/language_kv.svg);
         background-size: cover;
     }
+    .lang-no,.lang-en, lang-sa, .lang-kv {
+        display: none;
+    }
+    
     /* Bobler på åpningsskjerm */
     .bubbles {
         margin:0;
@@ -141,6 +148,8 @@
         animation: scale ease 20s infinite;
         top: 116px;
         left: 249px;
+        padding-top: 10px;
+        padding-left: 10px;
     }
     .bubble:nth-child(2) {
         
@@ -152,7 +161,7 @@
         top: 63px;
         left: 1000px;
         padding-top: 120px;
-        font-size:2.2rem;
+        font-size:2.4rem;
     }
     .bubble:nth-child(3) {
         background: url(images/bubble3.svg) no-repeat;
@@ -174,6 +183,10 @@
         animation: scale ease 25s infinite;
         padding-top: 190px;
     }
+    .bubble p {
+        padding: 100px;
+        margin: -100px;
+    }
     /* Tekstpanel */
     aside {
       background: url(images/panel.png) no-repeat;
@@ -188,12 +201,16 @@
     .objectText {
         position: absolute;
         top: 200px;
-        left: 50px;
+        left: 70px;
         width: 600px;
         height: 700px;
         padding: 10px;
         overflow-y: auto;
         color: #999;
+    }
+    .objectText ul {
+        margin-top: 20px;
+        list-style: none;
     }
     .objectText h1 {
         text-transform: uppercase;
