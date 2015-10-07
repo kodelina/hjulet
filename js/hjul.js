@@ -1,7 +1,7 @@
  $(document).ready(function(){
      
      var languages = $( '.lang-no, .lang-en, .lang-sa, .lang-kv' );
-     var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske ' );
+     var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna' );
      
      //Vis og skjul språk
 	
@@ -40,6 +40,31 @@
 	$('#hjemmefiske').click(function(){
 		$( activityTexts ).hide();
 		$('.hjemmefiske').fadeIn('slow');
+	});
+	
+    $('#forb_finnmarksfiske').click(function(){
+		$( activityTexts ).hide();
+		$('.forb_finnmarksfiske').fadeIn('slow');
+	});
+	
+	$('#finnmarksfiske').click(function(){
+		$( activityTexts ).hide();
+		$('.finnmarksfiske').fadeIn('slow');
+	});
+	
+	$('#vaarknipe').click(function(){
+		$( activityTexts ).hide();
+		$('.vaarknipe').fadeIn('slow');
+	});
+	
+	$('#lamming').click(function(){
+		$( activityTexts ).hide();
+		$('.lamming').fadeIn('slow');
+	});
+	
+	$('#vaaronna').click(function(){
+		$( activityTexts ).hide();
+		$('.vaaronna').fadeIn('slow');
 	});
 	
 	// Ikoneer - historiske bilder
