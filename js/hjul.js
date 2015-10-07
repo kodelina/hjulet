@@ -50,4 +50,31 @@
 		$(".forb_lofotfiske").hide();
 		$(".hjemmefiske").fadeIn("slow");
 	});
+	
+	// Ikoneer - historiske bilder
+	
+	$(".close").click(function(){
+    	$('#icon-image').removeClass("small-image"); 
+    	$('.info').removeClass("level-1");
+    	$('.historical-image').removeClass("level-2");	 	
+	});
+	
+	$('.big-image').click(function(){
+    	$(this).hide();
+    	$(".small-image").show();
+    	$('.info').addClass("level-1");
+    	$('.historical-image').addClass("level-2");
+    	$('.old-image').addClass("slide-in");
+    	$('.info').addClass("slide-out");
+	});
+	
+	$('.small-image').click(function(){
+    	$(this).hide();
+    	$(".big-image").show();
+    	$('.info').removeClass("level-1");
+    	$('.historical-image').removeClass("level-2");
+    	$('.old-image').removeClass("slide-in");
+    	$('.info').removeClass("slide-out");
+	});
+	
 });
