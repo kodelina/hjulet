@@ -1,51 +1,266 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <title>Årshjulet</title>
-  <link rel="stylesheet" href="hjul.css" />
-  <link rel="stylesheet" href="animations.css">
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+
+    <title>Januar</title>
+    <link href="hjul.css" rel="stylesheet">
+    <link href="animations.css" rel="stylesheet">
+    <script charset="utf-8" src="js/jquery-2.1.4.min.js" type=
+    "text/javascript"></script>
+    <script charset="utf-8" src="js/hjul.js" type="text/javascript"></script>
 </head>
+
 <body class="januar">
+    <form>
+        <input class="toggle" id="offcanvas" type="checkbox">
+    </form>
 
-  <input type="checkbox" id="offcanvas" class="toggle" />
+    <div class="wrapper">
+        <ul class="menu">
+            <li>
+                <a class="home" href="index.html"></a>
+            </li>
 
-  <div class="wrapper">
-      
-    <ul class="menu">
-        <li class="home"></li>
-        <li class="no"></li>
-        <li class="en"></li>
-        <li class="sa"></li>
-        <li class="kv"></li>
-    </ul>
+            <li>
+                <a id="lang-no"></a>
+            </li>
 
-    <aside>
-        <div class="objectText">
-            <h1>Våronna</h1>
-            <p>Om våren skulle jorda gjødsles, pløyes, harves og sås. I alt arbeid som hørte våronna til var hesten en viktig hjelper. Gjødsel fra husdyra ble lagt i hauger på vollen om høsten. Når våren kom, ble haugene spredt utover. Gjennom vinteren hadde gjerne telen i bakken presset opp stein som måtte fjernes for hånd. I tillegg skulle hesjer, redskap og verktøy repareres og settes i stand til sommerens arbeid. Når dyrene hadde blitt sluppet på beite, var det tid for å rengjøre fjøset etter en lang vinter. 
-            </p>
-            <p>Poteten ble satt litt før St. Hans. Sauegjødsel ble pløyd ned i potetlandet, så lagde man renner til potetene for hånd med grev. Settepotetene hadde blitt valgt ut på høsten når man tok opp poteten, og ble oppbevart i et mørkt og frostfritt rom vinteren over. 
-            </p>
-            
-        </div>
-    </aside>
+            <li>
+                <a id="lang-en"></a>
+            </li>
 
-    <section>
-      <label for="offcanvas" class="biglabel"></label>
-      <div class="container">
-        <div class="row">
-          <label for="offcanvas" class="toggler">
-            <span class="navicon"></span>
-          </label>
-        </div>
-      </div>
-      <div class="container">
-        <p>test </p>    
-     </div>
-    </section>
+            <li>
+                <a id="lang-sa"></a>
+            </li>
 
-  </div>
+            <li>
+                <a id="lang-kv"></a>
+            </li>
+        </ul>
+
+        <aside class="info">
+            <div class="object-text lang-no">
+                <div class="forb_lofotfiske">
+                    <h1>Forberedelse til Lofotfiske</h1>
+
+                    <p>I begynnelsen av januar var som regel alt klappet og
+                    klart til årets største fiske – Lofotfisket. Som regel
+                    hadde man egne kister som skulle romme det meste av utstyr
+                    man hadde behov for på en Lofottur som kunne vare fra
+                    januar til april. I dagene før avreise ble kista pakket med
+                    mat i den ene enden og klær i den andre. I kista kunne det
+                    være:</p>
+
+                    <ul>
+                        <li>3 skift med undertøy</li>
+
+                        <li>3 par strømper</li>
+
+                        <li>4–5 par votter</li>
+
+                        <li>Stoppenål og garn</li>
+
+                        <li>Smør i en tredall</li>
+
+                        <li>Ost/gomme</li>
+
+                        <li>25–30 lefser</li>
+
+                        <li>Flatbrød</li>
+
+                        <li>15 brød</li>
+
+                        <li>Spekekjøtt</li>
+
+                        <li>Kjøttrull</li>
+                    </ul>
+                    <p>
+                </div>
+
+                <div class="lofotfiske">
+                    <h1>Lofotfiske</h1>
+
+                    <p>Lofotfisket starter i slutten av januar på samme tid som
+                    skreien, gyteklar torsk, kommer til Lofoten for å gyte.
+                    Fisket varer til slutten av mars, og ved godt fiske ut
+                    april. Det regnes som det viktigste sesongfisket i
+                    Nord-Norge.</p>
+
+                    <p>Det har vært vanlig at folk fra kysten av Nord-Troms,
+                    samt fra Reisadalen og Kåfjorddalen har deltatt på
+                    Lofotfisket</p>
+                </div>
+
+                <div class="hjemmefiske">
+                    <h1>Hjemmefiske</h1>
+
+                    <p>Hjemmefisket foregår langs kysten og fjordene i nærheten
+                    av hjemstedet. Det kan være et alternativ til det å reise
+                    på sesongfisket til Lofoten eller Finnmark. Hjemmefisket er
+                    ikke bare orientert mot salg, men skaffer også mat til
+                    familien.</p>
+
+                    <p>Tradisjonelt er hjemmefisket delt i 4 sesonger –
+                    vinterfisket, vårfisket, sommerfisket og høstfisket.
+                    Sommerfisket var omfattende og viktigst, og som basis lå
+                    pomorhandelen. Om høsten var fisket etter feitsild det
+                    største.Når fisket ble drevet nært hjemmet var ikke behovet
+                    for utstyr så stort og investeringene ble mindre.
+                    Hjemmefisket var derfor ikke så ressurskrevende som de
+                    store sesongfiskeriene.</p>
+                </div>
+            </div>
+
+            <div class="object-text lang-en">
+                <div class="forb_lofotfiske">
+                    <h1>Preparation for the Lofoten fishing season</h1>
+
+                    <p>As a rule, by early January everything was ready for the
+                    year’s largest fishing expedition – the Lofoten fishing
+                    season. Each man normally had his own chest that would
+                    accommodate most of the equipment he would need on a trip
+                    to Lofoten that could last from January to April. In the
+                    days before departure, the chest was packed with food at
+                    one end and clothes at the other. A chest might
+                    contain:</p>
+
+                    <ul>
+                        <li>3 changes of underwear</li>
+
+                        <li>3 pairs of socks</li>
+
+                        <li>4–5 pairs of mittens</li>
+
+                        <li>Darning needle and yarn</li>
+
+                        <li>Butter in a wooden dish</li>
+
+                        <li>Cheese (hard or boiled to a thick paste)</li>
+
+                        <li>25–30 griddle cakes</li>
+
+                        <li>Crispbread</li>
+
+                        <li>15 loaves</li>
+
+                        <li>Cured meat</li>
+
+                        <li>Meat roll</li>
+                    </ul>
+                    <p>
+                </div>
+
+                <div class="lofotfiske">
+                    <h1>Lofoten fishing</h1>
+
+                    <p>The Lofoten fishing season starts at the end of January,
+                    when the skrei (cod that are ready to spawn) arrive in the
+                    waters around Lofoten. The fishing lasts until the end of
+                    March or, if stocks are good, until the end of April. This
+                    is considered to be the most important seasonal fishing
+                    endeavour in Northern Norway.</p>
+
+                    <p>People from the coast of North Troms, as well as from
+                    the Reisadalen and Kåfjorddalen valleys, normally took part
+                    in the Lofoten fishing.</p>
+                </div>
+
+                <div class="hjemmefiske">
+                    <h1>In-shore fishing</h1>
+
+                    <p>In-shore fishing takes place along the coast and in the
+                    fjords close to home. It can be an alternative to
+                    travelling to the seasonal fishing grounds in Lofoten and
+                    Finnmark. In-shore fishing does not merely aim to generate
+                    an income from the sale of catches, but to provide food for
+                    the family as well.</p>
+
+                    <p>Traditionally, in-shore fishing is divided into four
+                    seasons – winter, spring, summer and autumn. The summer
+                    fishing was extensive and the most important, since it was
+                    the basis for the Pomor trade with Russia. In the autumn,
+                    herring was the fishermen’s primary catch. With the fish
+                    driven close to home, there was less need to invest in
+                    expensive equipment. In-shore fishing was therefore not as
+                    resource-intensive as the major seasonal fisheries.</p>
+                </div>
+            </div>
+        </aside>
+
+        <aside class="historical-image">
+            <img class="forb_lofotfiske" src=
+            "images/forberedelse-lofotfiske.jpg"> <img class="lofotfiske" src=
+            "images/lofotfiske.jpg"> <img class="hjemmefiske" src=
+            "images/heimefiske.jpg"> <label class="toggler" for=
+            "offcanvas"></label>
+
+            <div class="close">
+                <label class="toggler" for="offcanvas"></label>
+            </div>
+
+            <div class="icon-big-image"></div>
+
+            <div class="icon-small-image"></div>
+        </aside>
+
+        <section>
+            <div class="container">
+                <ul class="bubbles">
+                    <li class="bubble" id="forb_lofotfiske">
+                        <label class="toggler" for="offcanvas"></label>
+
+                        <p class="lang-no"><label class="toggler" for=
+                        "offcanvas">Forberedelser til Lofotfiske</label></p>
+
+                        <p class="lang-en"><label class="toggler" for=
+                        "offcanvas">Preparation for the Lofoten fishing
+                        season</label></p>
+
+                        <p class="lang-sa"><label class="toggler" for=
+                        "offcanvas">Samisk</label></p>
+
+                        <p class="lang-kv"><label class="toggler" for=
+                        "offcanvas">Kvensk</label></p>
+                    </li>
+
+                    <li class="bubble" id="lofotfiske">
+                        <label class="toggler" for="offcanvas"></label>
+
+                        <p class="lang-no"><label class="toggler" for=
+                        "offcanvas">Lofotfiske</label></p>
+
+                        <p class="lang-en"><label class="toggler" for=
+                        "offcanvas">Lofoten fishing</label></p>
+
+                        <p class="lang-sa"><label class="toggler" for=
+                        "offcanvas">Samisk</label></p>
+
+                        <p class="lang-kv"><label class="toggler" for=
+                        "offcanvas">Kvensk</label></p>
+                    </li>
+
+                    <li class="bubble" id="hjemmefiske">
+                        <label class="toggler" for="offcanvas"></label>
+
+                        <p class="lang-no"><label class="toggler" for=
+                        "offcanvas">Hjemmefiske for de som ikke er på
+                        sesongfiske</label></p>
+
+                        <p class="lang-en"><label class="toggler" for=
+                        "offcanvas">In-shore fishing</label></p>
+
+                        <p class="lang-sa"><label class="toggler" for=
+                        "offcanvas">Samisk</label></p>
+
+                        <p class="lang-kv"><label class="toggler" for=
+                        "offcanvas">Kvensk</label></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
