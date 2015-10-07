@@ -236,7 +236,7 @@
     .old-image {
         width:1920px;
         height: 100%;
-        margin-left: 830px;
+        margin-left: 800px;
         -webkit-transition: margin 0.2s ease-in-out;
     }
     .slide-in {
