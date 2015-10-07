@@ -56,7 +56,9 @@
 	$(".close").click(function(){
     	$('#icon-image').removeClass("small-image"); 
     	$('.info').removeClass("level-1");
-    	$('.historical-image').removeClass("level-2");	 	
+    	$('.historical-image').removeClass("level-2");
+    	$('.old-image').removeClass("slide-in");
+    	$('.info').removeClass("slide-out");	 	
 	});
 	
 	$('.big-image').click(function(){
