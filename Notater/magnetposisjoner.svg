@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="hjulet.svg">
+   sodipodi:docname="magnetposisjoner.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -76,7 +76,7 @@
        d="m 376.79083,480.35169 -212.59843,0"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450"
        cx="-340.01068"
        cy="-480.51129"
@@ -90,14 +90,14 @@
        r="5.3149605"
        transform="scale(-1,-1)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4"
        cx="-240.79807"
        cy="-480.51129"
        r="5.3149605"
        transform="scale(-1,-1)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4-6"
        cx="-191.19177"
        cy="-480.51129"
@@ -109,13 +109,13 @@
        id="path3446-4"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-0"
        cx="413.57098"
        cy="480.51132"
        r="5.3149605" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-3"
        cx="463.17728"
        cy="480.51132"
@@ -138,7 +138,7 @@
        d="M 376.87064,480.37313 192.75499,374.07391"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-73"
        cx="-529.78595"
        cy="-227.73962"
@@ -171,7 +171,7 @@
        id="path3446-4-4"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-0-2"
        cx="603.34625"
        cy="227.73959"
@@ -192,7 +192,7 @@
        r="5.3149605"
        transform="matrix(0.8660254,0.5,-0.5,0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-6-4-7"
        cx="752.16516"
        cy="227.73959"
@@ -211,7 +211,7 @@
        r="5.3149605"
        transform="matrix(-0.5,-0.8660254,0.8660254,-0.5,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-45"
        cx="-518.14392"
        cy="86.054726"
@@ -225,7 +225,7 @@
        r="5.3149605"
        transform="matrix(-0.5,-0.8660254,0.8660254,-0.5,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4-6-8"
        cx="-418.93137"
        cy="86.054726"
@@ -244,7 +244,7 @@
        r="5.3149605"
        transform="matrix(0.5,0.8660254,-0.8660254,0.5,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-3-1"
        cx="690.91687"
        cy="-86.054749"
@@ -310,7 +310,7 @@
        r="5.3149605"
        transform="matrix(0,1,-1,0,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-3-32"
        cx="566.89777"
        cy="-376.7908"
@@ -343,7 +343,7 @@
        r="5.3149605"
        transform="matrix(0.5,-0.8660254,0.8660254,0.5,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-84"
        cx="-141.35312"
        cy="566.5661"
@@ -369,28 +369,28 @@
        id="path3446-4-0"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-0-0"
        cx="264.51974"
        cy="-566.5661"
        r="5.3149605"
        transform="matrix(-0.5,0.8660254,-0.8660254,-0.5,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-3-5"
        cx="314.12604"
        cy="-566.5661"
        r="5.3149605"
        transform="matrix(-0.5,0.8660254,-0.8660254,-0.5,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-3-5"
        cx="363.73236"
        cy="-566.5661"
        r="5.3149605"
        transform="matrix(-0.5,0.8660254,-0.8660254,-0.5,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4-6-4-57"
        cx="413.33865"
        cy="-566.5661"
@@ -402,7 +402,7 @@
        d="M 376.71103,480.37309 192.59539,586.6723"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-9"
        cx="-49.274609"
        cy="-604.5304"
@@ -416,7 +416,7 @@
        r="5.3149605"
        transform="matrix(-0.8660254,0.5,-0.5,-0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-0"
        cx="49.937988"
        cy="-604.5304"
@@ -442,21 +442,21 @@
        r="5.3149605"
        transform="matrix(0.8660254,-0.5,0.5,0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-3-4"
        cx="172.44122"
        cy="604.5304"
        r="5.3149605"
        transform="matrix(0.8660254,-0.5,0.5,0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-3-9"
        cx="222.04753"
        cy="604.5304"
        r="5.3149605"
        transform="matrix(0.8660254,-0.5,0.5,0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-6-4-75"
        cx="271.65381"
        cy="604.5304"

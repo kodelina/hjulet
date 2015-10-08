@@ -3,8 +3,10 @@ Hjulet - magnetsensor:
 D = 1200mm, senter-oppheng <= 85mm - nyttig radius = (1200-85)/2 = 557.5mm
 Radius har fire sensorer langs vegg-oppheng vertikalt fra senter oppover
  med ansvarsområde 557.5mm / 4 = 139.375 mm ~ 140mm
-Grey-encoding (1-12) position -> 4 bit value.
+Grey-encoding, modifisert, (1-12) position -> 4 bit value. 
+Mod = annenhver polaritet ytterst, for å signalisere ny lesbar verdi
 Måleverdi, kant til senter, topp mot-urs (baksiden av hjulet):
+
 0001 - jan
 0011 - feb
 0010 - mar
@@ -19,3 +21,42 @@ Måleverdi, kant til senter, topp mot-urs (baksiden av hjulet):
 1010 - dec
 
 Mål: første sensor/magnet = 7 cm fra kant, neste 21cm, neste 35cm og siste 49cm fra kant
+test: pålitelig leseavstand ca. 2cm
+Nytt Mål: første sensor ca. 5 cm fra kant, de tre neste hver 7. cm innover for å unngå
+magneter svært nære hverandre på innerste sirkel
+
+Sensor: Hall-effect latch sensor x 4. Polling/timed måling. Første gyldige måling sendes rpi.
+Neste verifiserte måling annerledes enn forrige sendes rpi. Timeout tid gått, send ny måling ..
+Gyldig måling: start med 3 like målinger i løpet av 1.5 sekunder. 
+Bestilt magneter, sensorer motatt ss446a pin 1-2-3 = Vdd-Gnd-Out, pullup 10k - open drain output.
+Test forskjellige polling-intervaller og antall like for å sile ut falske målinger og forstyrrelser.
+Måling: Gi strøm til sensorene. Vent til stabilisert måleforhold, 1.5us 
+Les output. Konverter Grey -> binary. Legg i kø. N like målinger i akseptert måling. 
+Ny verdi ? Send melding til rpi. 
+Første måling vil være lik forrige etter strømtap/omstart hvis hjulet ikke er rørt, eller står mellom posisjoner!
+Sensorene må monteres nokså nære plate for best effekt ( < 2.5cm)
+
+
+Sensorstyring: PIC (til nød arduino) med
+4 digitale inputs for avlesning av modifisert grey-kode
+digital output for strømforsyning sensorer
+3 digitale outputs for rgb-led styring
+minst en serie TX ledig -> rpi
+gjerne en serie RX ledig for farge/intensitet på leds
+eller en digital input for polling fra rpi (dersom ikke RX aktiv)
+Minimum 12-pins = 14-pins chip med serieport, f.eks. PIC16f1829 (overkill, kaster bort en 5'er :)
+
+rpi:
+Python åpner 9600 N81 serie-mottak, og legger nye målinger i lokal sqlite-database
+Tabell measure(ts timestamp, value int) (en heap .. )
+
+websider:
+lage en webside som returnerer siste hjul-posisjon
+
+Kabling og montering:
+---------------------
+1) Legg PIC, sensorer og leds (pluss evt. nivå-konvertering 5v-3.3v) i planken som fester hjulet til veggen.
+Input fra pc/rpi blir da +5v, gnd, TX, RX - max ~120mA = flatkabel og RPI utenfor
+
+2) legg PIC + rpi og strømforsyning(er) i nærhet av / på planken. Kabling inn/ut blir da HDMI + USB(touch)
+
