@@ -127,6 +127,7 @@
         width: 58px;
         height: 61px;
         cursor: pointer;
+        opacity: .5;
     }
     .home-icon {
         background-image: url(images/home.svg);
@@ -299,9 +300,10 @@
     }
     .object-text h1 {
         text-transform: uppercase;
-        margin-bottom: 30px;
+        font-size: 2.3rem;
         font-weight: normal;
         color: #6a86a8;
+        margin-bottom: 30px;
         width: 800px;
     }
     body.april .object-text h1, body.mai .object-text h1, body.juni .object-text h1, body.juli .object-text h1 {
@@ -401,10 +403,13 @@
         left: 1350px; 
     }
     h1.november {
-        left: 1450px; 
+        left: 1470px; 
     }
     h1.november {
-        left: 1550px; 
+        left: 1590px; 
+    }
+    h1.desember {
+        left: 1710px; 
     }
     body.januar section, body.februar section, body.mars section, body.november section, body.desember section {
         height: 1040px;

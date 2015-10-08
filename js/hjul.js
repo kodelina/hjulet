@@ -1,6 +1,7 @@
  $(document).ready(function(){
      
      var languages = $( '.lang-no, .lang-en, .lang-sa, .lang-kv' );
+     var languageButtons = $( '#lang-no, #lang-en, #lang-sa, #lang-kv' );
      var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna, .torving, .hoya, .seifiske, .hosting, .sildefiske, .poteter, .produksjon, .slakting' );
      
      //Vis og skjul språk
@@ -8,21 +9,30 @@
 	$('#lang-no').click(function(){
 		$( languages ).hide();
 		$('.lang-no').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
 	});
 	
 	$('#lang-en').click(function(){
 		$( languages ).hide();
 		$('.lang-en').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
+
 	});
 	
 	$('#lang-sa').click(function(){
 		$( languages ).hide();
 		$('.lang-sa').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
 	});
 	
 		$('#lang-kv').click(function(){
 		$( languages ).hide();
 		$('.lang-kv').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
 	});
 	
 	// Bobler - Aktiviteter 
