@@ -36,35 +36,42 @@
     body {
       font-size: 1.6rem;
       line-height: 2.2rem;
-      height: 90%;
       background-color: #67BEEB;
     }
     /* Bakgrunner for måneder */
-    .home {
+    body.home {
       background:url(images/skjermsparer2.jpg);
       background-size:100%;
     }
-    .januar {
+    body.januar {
       background:url(images/forberedelse-lofotfiske_overlay.jpg);
       background-size:100%;
     }
-    .spinning {
+    body.februar {
+      background:url(images/forberedelse-finnmarka_overlay.jpg);
+      background-size:100%;
+    }
+    body.mars {
+      background:url(images/heimefiske_overlay.jpg);
+      background-size:100%;
+    }
+    body.april {
+      background:url(images/vaarknipa_overlay.jpg);
+      background-size:100%;
+    }
+    body.mai {
+      background:url(images/lamming_overlay.jpg);
+      background-size:100%;
+    }
+    body.juni {
+      background:url(images/vaaronna.jpg);
+      background-size:100%;
+    }
+    body.spinning {
         background-color: #355077;
     }
     .wrapper {
       height: 100%;
-    }
-    .container {
-      margin: 0 15px;
-    }
-    .row {
-      padding: -15px;
-      margin: 15px 0;
-    }
-    .row:before,
-    .row:after {
-      content: '';
-      display: table;
     }
     /* Hjul - animasjon */
     .spin {
@@ -184,6 +191,16 @@
         animation: scale ease 25s infinite;
         padding-top: 190px;
     }
+    .bubble:nth-child(5) {
+        background: url(images/bubble4.svg) no-repeat;
+        width: 361px;
+        height: 426px;
+        top: 5px;
+        left: 480px;
+        -webkit-transform: scale(0.9);
+        animation: scalee ease 10s infinite;
+        padding-top: 190px;
+    }
     .bubble p {
         padding: 100px;
         margin: -100px;
@@ -274,7 +291,71 @@
       position: fixed;
       margin-right: 0;
     }
-
+    section h1 {
+        position: absolute;
+        width: 100%;
+        bottom: 35px;
+    }
+    h1.januar {
+        left: 70px; 
+    }
+    h1.februar {
+        left: 200px; 
+    }
+    h1.mars {
+        left: 350px; 
+    }
+    h1.april {
+        left: 500px; 
+    }
+    h1.mai {
+        left: 650px; 
+    }
+    h1.juni {
+        left: 800px; 
+    }
+    h1.juli {
+        left: 950px; 
+    }
+    h1.august {
+        left: 1100px; 
+    }
+    h1.september {
+        left: 1250px; 
+    }
+    h1.oktober {
+        left: 1400px; 
+    }
+    h1.november {
+        left: 1550px; 
+    }
+    h1.november {
+        left: 1700px; 
+    }
+    body.januar section, body.februar section, body.mars section, body.april section, body.mai section, body.juni section, body.juli section, body.august section, body.september section, body.oktober section, body.november section, body.desember section {
+      height: 1040px;
+      border-bottom: 1px solid #67BEEB;
+    }
+    section h1 span {
+        position: relative;
+        height: 40px;
+        padding: 5px 20px;
+        background: #67BEEB;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    section h1 span:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 25px 12px 0;
+        border-color: #67BEEB transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        bottom: -25px;
+        left: 10px;
+        }
     .toggle:checked + .wrapper > .info {
       margin-left: 0;
     }
@@ -289,4 +370,3 @@
     .toggle {
       display: none;
     }
-

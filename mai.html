@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Mai</title>
+  <link rel="stylesheet" href="hjul.css" />
+  <link rel="stylesheet" href="animations.css">
+  <script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/hjul.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="mai">
+
+  <input type="checkbox" id="offcanvas" class="toggle" />
+
+  <div class="wrapper">
+      
+    <ul class="menu">
+        <li><a class="home-icon" href="index.html"></a></li>
+        <li><a id="lang-no"></a></li>
+        <li><a id="lang-en"></a></li>
+        <li><a id="lang-sa"></a></li>
+        <li><a id="lang-kv"></a></li>
+    </ul>
+    
+    <aside class="info">
+        <div class="object-text lang-no">
+            <div class="finnmarksfiske"> 
+                <h1>Finnmarksfisket</h1>
+                <p>Finnmarksfisket deles i 3 sesonger - vintertorskefisket, vårtorskefisket eller loddetorskefisket og sommerfisket. Vårtorskefisket var, og er, det viktigste og mest lønnsomme av sesongfiskeriene i Finnmark. Det er også det andre store sesongfisket etter Lofotfisket. Fisket starter i mars og kan vare ut juni. I 1888 deltok 806 mann fra Skjervøy, Reisa og Kvænangen på Finnmarksfisket. Samme år deltok det 867 menn fra Storfjord, Lyngen og Kåfjord. Økonomisk var Finnmarksfisket mer usikkert enn Lofotfisket.</p>
+            </div> 
+            <div class="hjemmefiske"> 
+                <h1>Hjemmefiske</h1>
+                <p>Hjemmefisket foregår langs kysten og fjordene i nærheten av hjemstedet. Det kan være et alternativ til det å reise på sesongfisket til Lofoten eller Finnmark. Hjemmefisket er ikke bare orientert mot salg, men skaffer også mat til familien.</p>
+                <p>Tradisjonelt er hjemmefisket delt i 4 sesonger – vinterfisket, vårfisket, sommerfisket og høstfisket. Sommerfisket var omfattende og viktigst, og som basis lå pomorhandelen. Om høsten var fisket etter feitsild det største.Når fisket ble drevet nært hjemmet var ikke behovet for utstyr så stort og investeringene ble mindre. Hjemmefisket var derfor ikke så ressurskrevende som de store sesongfiskeriene.</p>
+            </div> 
+            <div class="lamming"> 
+                <h1>Lamming og klipping av sau</h1>
+                <p>Lamminga tok til i mai, og kunne ta flere uker, alt etter som hvor mange dyr man hadde. De fleste ventet til etter lamming før sauene ble klippet. Om sommeren ble det tungt for dyrene om de gikk med vinterulla på, og høstulla ville bli for vanskelig å arbeide til klær dersom den hang på sauen hele året.</p>
+                <p>Sauene ble klippet for hånd med sauesakser, og ulla måtte sorteres med en gang. Lår og bukull ble lagt for seg, denne skulle brukes til grovere sengklær og ryer. Finere ull ble til kjoletøy, mens sjøvottene måtte ha langhåret ull slik at de ikke krympet så fort.</p>
+            </div>        
+        </div>
+        
+        <div class="object-text lang-en">
+            <div class="finnmarksfiske"> 
+                <h1>Finnmark fishing</h1>
+                <p>Fishing off the coast of Finnmark is divided into three seasons – winter cod fishing, spring cod fishing and summer fishing.</p>
+                <p>Fishing for spring cod was, and still is, the most important and most lucrative of the fishing seasons in Finnmark. Only the Lofoten fishing season is bigger. In Finnmark, the fishing starts in March and can last until the end of June. In 1888, 806 men from Skjervøy, Nordreisa and Kvænangen took part in the Finnmark fishing. In the same year, 867 men from Storfjord, Lyngen and Kåfjord also took part. Financially, the fishing in Finnmark had a less certain outcome than the Lofoten fishing.</p>
+            </div>
+            <div class="hjemmefiske"> 
+                <h1>In-shore fishing</h1>
+                <p>In-shore fishing takes place along the coast and in the fjords close to home. It can be an alternative to travelling to the seasonal fishing grounds in Lofoten and Finnmark. In-shore fishing does not merely aim to generate an income from the sale of catches, but to provide food for the family as well.</p>
+                 <p>Traditionally, in-shore fishing is divided into four seasons – winter, spring, summer and autumn. The summer fishing was extensive and the most important, since it was the basis for the Pomor trade with Russia. In the autumn, herring was the fishermen’s primary catch. With the fish driven close to home, there was less need to invest in expensive equipment. In-shore fishing was therefore not as resource-intensive as the major seasonal fisheries.</p>
+            </div>
+            <div class="lamming"> 
+                <h1>Lambing and sheep shearing</h1>
+                <p>The lambing season started in May and could last several weeks, depending on how many animals the farmer had. Most people waited until after the sheep had lambed before shearing them. It was hard for the animals to get through the summer in their thick winter fleeces. And an autumn-sheared fleece would be too difficult to clean if it had been on the sheep for the entire year.</p>
+                <p>The sheep were sheared by hand, and the wool had to be sorted immediately. Thigh and belly wool was put aside – this would be used for coarser bedclothes and mats. Finer wool was turned into dress fabric, while mariners’ mittens had to be made of long-haired wool so they did not shrink so fast.</p>
+            </div>
+        </div>
+    </aside>
+    <aside class="historical-image">
+        <img src="images/finnmarka.jpg" class="old-image finnmarksfiske" />
+        <img src="images/heimefiske.jpg" class="old-image hjemmefiske" />
+        <img src="images/lamming.jpg" class="old-image lamming" />
+        <label for="offcanvas" class="toggler">
+            <div class="close"></div>
+        </label>
+        <div class="big-image"></div>
+        <div class="small-image"></div>
+    </aside>
+
+    <section>
+        <ul class="bubbles">
+              <li id="finnmarksfiske" class="bubble">
+                <label for="offcanvas" class="toggler">
+                    <p class="lang-no">Finnmarksfisket</p>
+                    <p class="lang-en">Finnmark fishing</p>
+                    <p class="lang-sa">Samisk</p>
+                    <p class="lang-kv">Kvensk</p>
+                </label>
+              </li>
+              <li id="hjemmefiske" class="bubble">
+                <label for="offcanvas" class="toggler">
+                   <p class="lang-no">Hjemmefiske for de som ikke er på sesongfiske</p>
+                   <p class="lang-en">In-shore fishing</p>
+                   <p class="lang-sa">Samisk</p>
+                   <p class="lang-kv">Kvensk</p>
+                </label>
+              </li>
+              <li id="lamming" class="bubble">
+                <label for="offcanvas" class="toggler">
+                   <p class="lang-no">Lamming og klipping av sau</p>
+                   <p class="lang-en">Lambing and sheep shearing</p>
+                   <p class="lang-sa">Samisk</p>
+                   <p class="lang-kv">Kvensk</p>
+                </label>
+              </li>
+        </ul>
+        <h1 class="mai"><span>Mai</span></h1>
+    </section>
+
+  </div>
+</body>
+</html>
