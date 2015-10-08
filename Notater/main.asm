@@ -79,7 +79,20 @@ init
 	movwf TRISC
 	banksel ANSELC
 	clrf ANSELC ; no analog function on port c
+	banksel WPUC
+	movlw 0x0f
+	movwf WPUC  ; weak pullup for open drain output of sensors
 	; Configure Fosc @ 4MHz, mcu clock = 1MHz, TMR0 = 1:1
+	; OSCCON, OPTION_REG, T1CON
+	movlw b'1101' << IRCF | b'10' ; 4MHz clock
+	banksel OSCCON
+	movwf OSCCON
+	movlw 1 << PSA ; prescaler -> WDT (timer0 = 1:1)
+	banksel OPTION_REG
+	movwf OPTION_REG
+	movlw b'01' << TMR1CS | 1 << T1SYNC
+	movwf T1CON ; timer1 ready to go at 1:1, but not started
+	
 	
 	; INTCON, TMR0 sets rgb-action. Rollover on 1:1 clock = 1MHz/256 cycle
 	bsf INTCON, TMR0IE ; accept interrupts for timer 0 overflow
