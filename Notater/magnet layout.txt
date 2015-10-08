@@ -1,0 +1,21 @@
+Hjulet - magnetsensor:
+----------------------
+D = 1200mm, senter-oppheng <= 85mm - nyttig radius = (1200-85)/2 = 557.5mm
+Radius har fire sensorer langs vegg-oppheng vertikalt fra senter oppover
+ med ansvarsområde 557.5mm / 4 = 139.375 mm ~ 140mm
+Grey-encoding (1-12) position -> 4 bit value.
+Måleverdi, kant til senter, topp mot-urs (baksiden av hjulet):
+0001 - jan
+0011 - feb
+0010 - mar
+0110 - apr
+0111 - may
+0101 - jun
+0100 - jul
+1100 - aug
+1101 - sep
+1111 - oct
+1110 - nov
+1010 - dec
+
+Mål: første sensor/magnet = 7 cm fra kant, neste 21cm, neste 35cm og siste 49cm fra kant
