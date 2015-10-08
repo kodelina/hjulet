@@ -22,50 +22,74 @@
         font-style: normal;
     }
   * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
    html {
-      font-size: 100%;
-      font-family: "conduit_itclight", sans-serif;
-      height: 100%;
-      overflow:hidden;
-      font-size:16px;
+        font-size: 100%;
+        font-family: "conduit_itclight", sans-serif;
+        height: 100%;
+        overflow:hidden;
+        font-size:16px;
     }
     body {
-      font-size: 1.6rem;
-      line-height: 2.2rem;
-      background-color: #67BEEB;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: #67BEEB;
     }
     /* Bakgrunner for måneder */
     body.home {
-      background:url(images/skjermsparer2.jpg);
-      background-size:100%;
+        background:url(images/skjermsparer2.jpg);
+        background-size:100%;
     }
     body.januar {
-      background:url(images/forberedelse-lofotfiske_overlay.jpg);
-      background-size:100%;
+        background:url(images/lofotfiske_overlay.jpg);
+        background-size:100%;
     }
     body.februar {
-      background:url(images/forberedelse-finnmarka_overlay.jpg);
-      background-size:100%;
+        background:url(images/forberedelse-finnmarka_overlay.jpg);
+        background-size:100%;
     }
     body.mars {
-      background:url(images/heimefiske_overlay.jpg);
-      background-size:100%;
+        background:url(images/heimefiske_overlay.jpg);
+        background-size:100%;
     }
     body.april {
-      background:url(images/vaarknipa_overlay.jpg);
-      background-size:100%;
+         background:url(images/vaarknipa_overlay.jpg);
+        background-size:100%;
     }
     body.mai {
-      background:url(images/lamming_overlay.jpg);
-      background-size:100%;
+        background:url(images/lamming_overlay.jpg);
+        background-size:100%;
     }
     body.juni {
-      background:url(images/vaaronna.jpg);
-      background-size:100%;
+        background:url(images/vaaronna_overlay.jpg);
+        background-size:100%;
+    }
+    body.juli {
+        background:url(images/hoya_overlay.jpg);
+        background-size:100%;
+    }
+    body.august {
+        background:url(images/hosting_overlay.jpg);
+        background-size:100%;
+    }
+    body.september {
+        background:url(images/poteter_overlay.jpg);
+        background-size:100%;
+    }
+    body.oktober {
+        background:url(images/slakting_overlay.jpg);
+        background-size:100%;
+    }
+    body.november {
+        background:url(images/produksjon_overlay.jpg);
+        background-size:100%;
+    }
+    body.desember {
+        background:url(images/forberedelse-lofotfiske_overlay.jpg);
+        background-size:100%;
     }
     body.spinning {
         background-color: #355077;
@@ -143,24 +167,31 @@
         list-style:none;
         opacity: 0.8;
     }
+    body.april .bubbles, body.mai .bubbles, body.juni .bubbles, body.juli .bubbles {
+        color: #99b894;
+    }
+    body.august .bubbles, body.september .bubbles, body.oktober .bubbles {
+        color: #99653b;
+    }
+    body.desember .bubbles, body.februar .bubbles {
+        color: #fff;
+    }
+
     .bubbles li {
         position: absolute;
         background-size: cover;
-        padding: 70px 40px 0 50px;
         text-align: center;
     }
-    .bubbles:first-child {
+    .bubble:first-child {
         background: url(images/bubble1.svg) no-repeat;
         width: 294px;
         height: 307px;
         animation: scale ease 20s infinite;
         top: 116px;
         left: 249px;
-        padding-top: 30px;
-        padding-left: 0px;
+        padding: 90px 40px 0 30px;
     }
-    .bubble:nth-child(2) {
-        
+    .bubble:nth-child(2) {  
         background: url(images/bubble2.svg) no-repeat;
         width: 365px;
         height: 428px;
@@ -168,7 +199,7 @@
         animation: scalee ease 10s infinite;
         top: 63px;
         left: 1000px;
-        padding-top: 120px;
+        padding: 120px 60px 0 30px;
         font-size:2.4rem;
     }
     .bubble:nth-child(3) {
@@ -179,8 +210,7 @@
         left: 204px;
         -webkit-transform: scale(0.9);
         animation: scalee ease 15s infinite;
-        padding-top: 150px;
-        padding-left: 30px;
+        padding: 130px 60px 0 30px;
     }
     .bubble:nth-child(4) {
         background: url(images/bubble4.svg) no-repeat;
@@ -196,25 +226,59 @@
         width: 361px;
         height: 426px;
         top: 5px;
-        left: 480px;
+        left: 600px;
         -webkit-transform: scale(0.9);
         animation: scalee ease 10s infinite;
-        padding-top: 190px;
+        padding: 190px 60px 0 40px;
     }
     .bubble p {
         padding: 100px;
         margin: -100px;
     }
+    body.desember .bubbles, body.februar .bubbles {
+        color: #fff;
+    }
+    body.desember .bubble:first-child, body.februar .bubble:first-child {
+        background: url(images/bubble1_blue.svg) no-repeat;
+        width: 294px;
+        height: 307px;
+        -webkit-transform: scale(0.9);
+        animation: scalee ease 15s infinite;        
+        top: 206px;
+        left: 249px;
+        padding: 90px 40px 0 30px;
+    }
+    body.desember .bubble:nth-child(2), body.februar .bubble:nth-child(2) {  
+        background: url(images/bubble2_blue.svg) no-repeat;
+        width: 390px;
+        height: 373px;
+        -webkit-transform: scale(0.9);
+        animation: scalee ease 15s infinite;
+        top: 500px;
+        left: 700px;
+        padding: 120px 60px 0 30px;
+        font-size:2.4rem;
+    }
+    body.desember .bubble:nth-child(3), body.februar .bubble:nth-child(3) {
+        background: url(images/bubble1_blue.svg) no-repeat;
+        width: 294px;
+        height: 307px;
+        animation: scale ease 20s infinite;
+        top: 306px;
+        left: 1400px;
+        padding: 90px 40px 0 30px;
+    }
+
     /* Tekstpanel */
     .info {
-      background: url(images/panel.png) no-repeat;
-      width: 950px;
-      margin-left: -55%;
-      float: left;
-      height: 100%;
-      position: fixed;
-      z-index: 2;
-      -webkit-transition: margin 0.2s ease-in-out;
+        background: url(images/panel.png) no-repeat;
+        width: 950px;
+         margin-left: -55%;
+        float: left;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        -webkit-transition: margin 0.2s ease-in-out;
     }
     .slide-out {
        margin-left: -55% !important; 
@@ -240,6 +304,16 @@
         color: #6a86a8;
         width: 800px;
     }
+    body.april .object-text h1, body.mai .object-text h1, body.juni .object-text h1, body.juli .object-text h1 {
+        color: #99b894;
+    }
+    body.august .object-text h1, body.september .object-text h1, body.oktober .object-text h1 {
+        color: #99653b;
+    }
+    body.november .object-text h1, body.februar .object-text h1 {
+        color: #fff;
+    }
+    
     /* Bildepanel */
     .historical-image {
         width:1920px;
@@ -286,10 +360,10 @@
         display: none;
     }
     section {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      margin-right: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin-right: 0;
     }
     section h1 {
         position: absolute;
@@ -324,17 +398,25 @@
         left: 1250px; 
     }
     h1.oktober {
-        left: 1400px; 
+        left: 1350px; 
+    }
+    h1.november {
+        left: 1450px; 
     }
     h1.november {
         left: 1550px; 
     }
-    h1.november {
-        left: 1700px; 
+    body.januar section, body.februar section, body.mars section, body.november section, body.desember section {
+        height: 1040px;
+        border-bottom: 1px solid #67BEEB;
     }
-    body.januar section, body.februar section, body.mars section, body.april section, body.mai section, body.juni section, body.juli section, body.august section, body.september section, body.oktober section, body.november section, body.desember section {
-      height: 1040px;
-      border-bottom: 1px solid #67BEEB;
+    body.april section, body.mai section, body.juni section, body.juli section {
+        height: 1040px;
+        border-bottom: 1px solid #99b894;
+    }
+    body.august section, body.september section, body.oktober section {
+        height: 1040px;
+        border-bottom: 1px solid #99653b;
     }
     section h1 span {
         position: relative;
@@ -355,18 +437,30 @@
         z-index: 1;
         bottom: -25px;
         left: 10px;
-        }
+    }
+    body.april section h1 span, body.mai section h1 span, body.juni section h1 span, body.juli section h1 span {
+        background: #99b894;     
+    }
+    body.august section h1 span, body.september section h1 span, body.oktober section h1 span {
+        background: #99653b;     
+    }
+    body.april section h1 span:after, body.mai section h1 span:after, body.juni section h1 span:after, body.juli section h1 span:after {
+        border-color: #99b894 transparent;
+    }
+    body.august section h1 span:after, body.september section h1 span:after, body.oktober section h1 span:after {
+        border-color: #99653b transparent;
+    }
     .toggle:checked + .wrapper > .info {
-      margin-left: 0;
+        margin-left: 0;
     }
     .toggle:checked + .wrapper > .historical-image {
-      margin-left: 0;
+        margin-left: 0;
     }
 
     .toggler {
-      display: inline-block;
-      cursor: pointer;
+        display: inline-block;
+        cursor: pointer;
     }
     .toggle {
-      display: none;
+        display: none;
     }

@@ -1,7 +1,7 @@
  $(document).ready(function(){
      
      var languages = $( '.lang-no, .lang-en, .lang-sa, .lang-kv' );
-     var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna' );
+     var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna, .torving, .hoya, .seifiske, .hosting, .sildefiske, .poteter, .produksjon, .slakting' );
      
      //Vis og skjul språk
 	
@@ -14,7 +14,6 @@
 		$( languages ).hide();
 		$('.lang-en').fadeIn('slow');
 	});
-
 	
 	$('#lang-sa').click(function(){
 		$( languages ).hide();
@@ -65,6 +64,46 @@
 	$('#vaaronna').click(function(){
 		$( activityTexts ).hide();
 		$('.vaaronna').fadeIn('slow');
+	});
+	
+	$('#torving').click(function(){
+		$( activityTexts ).hide();
+		$('.torving').fadeIn('slow');
+	});
+	
+	$('#hoya').click(function(){
+		$( activityTexts ).hide();
+		$('.hoya').fadeIn('slow');
+	});
+	
+	$('#seifiske').click(function(){
+		$( activityTexts ).hide();
+		$('.seifiske').fadeIn('slow');
+	});
+	
+	$('#hosting').click(function(){
+		$( activityTexts ).hide();
+		$('.hosting').fadeIn('slow');
+	});
+	
+	$('#sildefiske').click(function(){
+		$( activityTexts ).hide();
+		$('.sildefiske').fadeIn('slow');
+	});
+	
+	$('#poteter').click(function(){
+		$( activityTexts ).hide();
+		$('.poteter').fadeIn('slow');
+	});
+	
+	$('#produksjon').click(function(){
+		$( activityTexts ).hide();
+		$('.produksjon').fadeIn('slow');
+	});
+	
+	$('#slakting').click(function(){
+		$( activityTexts ).hide();
+		$('.slakting').fadeIn('slow');
 	});
 	
 	// Ikoneer - historiske bilder
