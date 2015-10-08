@@ -9,7 +9,7 @@
 ; RA0 - pin 19 - ICSPDAT - 
 ; RA1 - pin 18 - ICSPCLK - 
 ; RA2 - pin 17 - INT
-; RA3 - pin  4 - Vpp     -
+; RA3 - pin  4 - Vpp
 ; RA4 - pin  3 -
 ; RA5 - pin  2 -
 
@@ -19,7 +19,7 @@
 ; RB7 - pin 10 - TX
 
 ; PORTC, handles IO ..
-; RC0 - pin 16 - wheel sensor 0
+; RC0 - pin 16 - wheel sensor 0 - this MUST be outermost sensor!
 ; RC1 - pin 15 - wheel sensor 1
 ; RC2 - pin 14 - wheel sensor 2
 ; RC3 - pin  7 - wheel sensor 3
@@ -27,8 +27,7 @@
 ; RC5 - pin  5 - LED RED
 ; RC6 - pin  8 - LED GREEN
 ; RC7 - pin  9 - LED BLUE
- 
- 
+
 ; RGB output of configured values for display background color
 ; startup value = 0,0,0 for no display. 
 ; Set color using serial three-byte command ending with null byte.
@@ -74,7 +73,7 @@ ledBlue EQU RC7
 	org 0x04 ; interrupt vector
 	goto isr
 init
-	; IO port C - configure wheel sensors digital input, led&power output
+	; IO ports - configure wheel sensors digital input, led&power output
 	movlw (1<<ledRed)|(1<<ledGreen)|(1<<ledBlue)|(1<<sensorPwr)
 	banksel TRISC
 	movwf TRISC
@@ -83,16 +82,24 @@ init
 	; Configure Fosc @ 4MHz, mcu clock = 1MHz, TMR0 = 1:1
 	
 	; INTCON, TMR0 sets rgb-action. Rollover on 1:1 clock = 1MHz/256 cycle
-	bsf INTCON, TMR0IE
-	bsf INTCON, GIE
+	bsf INTCON, TMR0IE ; accept interrupts for timer 0 overflow
+	bsf INTCON, PEIE   ; accept (enabled) peripheral interrupts
+	banksel PIE1
+	bsf PIE1, RCIE	   ; enable receive interrupt
+	bsf INTCON, GIE    ; accept interrupts at all
 	; setup tx serial for 9600,N,8,1 - first the baud generator
 	; SYNC = 0, BRGH = 1, BRG16 = 0, SPBRG = 25 (check data sheet)
 	banksel TXSTA
 	bsf TXSTA, BRGH  ; SYNC is default 0
 	movlw .25
 	movwf SPBRG
-	; prepare serial tx: SPEN, TXEN, TXREG, TXIF
-	
+	; prepare serial tx: SPEN, TXEN, TXREG, TXIF, RCIF
+	; enable transmitter: TXEN = 1, SYNC = 0, SPEN = 1
+	bcf TXSTA, SYNC
+	bsf TXSTA, TXEN
+	; enable receiver: CREN = 1, SYNC = 0, SPEN = 1
+	bsf RCSTA, CREN
+	bsf RCSTA, SPEN
 	; appinit
 	clrf bufferPointer
 	clrf ledCount
@@ -101,11 +108,100 @@ init
 	movwf gLed
 	movwf bLed
 main
-	; main loop. RGB handles itself, so does serial - just poll the wheel
-	; and yell when it changes.
-	
+	; arrange for a small break first ?
+	clrf temp
+	clrf count
+	nop
+	decfsz count, f
+	bra $-2
+	decfsz temp, f
+	bra $-4
+	; see if a request for data has arrived on the serial bus
+	; 1. bufferPointer = 1 & buffer[0] = 0 => request for update
+	banksel buffer
+	movlw 0x01
+	xorwf bufferPointer, W
+	btfss STATUS, Z
+	bra mainNoRequest
+	movf buffer, f
+	btfss STATUS, Z
+	bra mainNoRequest
+	call sendW	    ; ok, send update.
+	clrf bufferPointer
+mainNoRequest	
+	; 2. bufferPointer = 4 & buffer[3] = 0 => set RGB
+	movlw 0x04
+	xorwf bufferPointer, W
+	btfss STATUS, Z
+	bra mainNoRGB
+	movf buffer + 3, f
+	btfss STATUS, Z
+	bra mainNoRGB
+	; hooray - a new set of RGB has arrived
+	movfw buffer + 0
+	movwf rLed
+	movfw buffer + 1
+	movwf gLed
+	movfw buffer + 2
+	movwf bLed
+	clrf bufferPointer
+	call scaleLeds
+mainNoRGB
+	; check on our sensors 
+	banksel PORTC
+	movfw PORTC
+	andlw 0x0f	; just the sensor bits
+	movwf measurement
+	; if equal to current, ignore
+	xorwf current, F
+	btfsc STATUS, Z
+	bra finishedMeasurement
+	; zo, we hav e new one. Not interested unless bit 0 changes
+	movfw measurement
+	andlw 0x01
+	xorwf current, W
+	asrf WREG   ; C set = different measurement - else, false alarm
+	btfss STATUS, C
+	bra finishedMeasurement
+	; so, new and bit0 change. Are we building on previous measurements ?
+	movfw measurement
+	xorwf new, W
+	btfss STATUS, Z
+	bra mainNewValue
+	; so, more of the same .. we meet again
+	incf counter, f
+	movlw FILTER
+	xorwf counter, W
+	btfss STATUS, Z
+	bra finishedMeasurement
+	; we have a new value, tidy up our variables
+	movfw current
+	movwf previous
+	movfw measurement
+	movwf current
+	clrf counter
+	clrf new
+	call sendW
+	bra finishedMeasurement
+mainNewValue ; new, new value .. start counting
+	movfw measurement
+	movwf new
+	clrf counter
+finishedMeasurement
 	goto main
 
+sendW
+	; make sure TXIF is set, no outbound queue
+	banksel PIR1
+	btfss PIR1, TXIF
+	bra sendW
+	banksel current
+	movfw current ; current value of wheel sensoring
+	banksel TXREG
+	movwf TXREG
+	banksel 0
+	return
+	
 scaleLeds ; after any change of rgb-values, and rollover slowCountH	
 	movfw rLed
 	movwf prodLo
@@ -145,7 +241,7 @@ isr
 	bra startRed
 	incfsz slowCountH, f ; now this, will be slow enough ?
 	bra startRed
-	call scaleLeds
+	call scaleLeds ; >120 cycles .. will this work well?
 startRed
 	movf rLed, f
 	btfss STATUS, Z
@@ -161,23 +257,43 @@ startBlue
 	retfie
 TMR0NotZero
 	; turn off LED, if appropriate at this time
-stopRed
 	movfw ledCount
-	xorwf srLed, W
+	xorwf srLed, W   ; check red led setting
 	btfsc STATUS, Z
-	bcf PORTC, ledRed
-stopGreen
+	bcf PORTC, ledRed ; turn off the red led
 	movfw ledCount
-	xorwf sgLed, W
+	xorwf sgLed, W	 ; check green led setting
 	btfsc STATUS, Z
-	bcf PORTC, ledGreen
-stopBlue
+	bcf PORTC, ledGreen ; turn off green led
 	movfw ledCount
-	xorwf sbLed, W
+	xorwf sbLed, W	  ; check blue led setting
 	btfsc STATUS, Z
-	bcf PORTC, ledBlue
+	bcf PORTC, ledBlue  ; turn off blue led
 	retfie
 notTMR0	
+	; serial usart receive, unread incoming byte ?
+	banksel PIR1
+	btfss PIR1, RCIF
+	bra unknownISR
+	; if bufferPointer > 3, buffer is invalid, and byte is lost
+	btfsc bufferPointer, 2
+	bra bufferInvalid
+	; welcome aboard :)
+	banksel buffer
+	movlw low buffer
+	addwf bufferPointer, W
+	movwf FSR0L
+	movlw high buffer
+	movwf FSR0H
+	banksel RCREG
+	movfw RCREG
+	movwf INDF0
+	banksel buffer
+	incf bufferPointer, f
+	retfie
+bufferInvalid	
+	clrf bufferPointer ; sorry, but all is lost :(
+unknownISR	
 	clrf INTCON
 	retfie
 	
@@ -186,14 +302,14 @@ mul8	; prodlhi:prodLo = w * prodLo
         clrf count
 	bsf count,3
 	rrf prodLo,f
-loop
+mulLoop
 	skpnc
 	addwf prodHi,f
 	rrf prodHi,f
 	rrf prodLo,f
 
 	decfsz count
-	bra loop
+	bra mulLoop
 	return
 	
 getSine ; courtesy of Eric Smith @ piclist.com
@@ -207,7 +323,7 @@ getSine ; courtesy of Eric Smith @ piclist.com
 	return		    ; this is a signed result ..
 	
 sineTable
-	andlw 0x3f ; so, I'm allowed to be paranoid !
+	andlw 0x3f ; so, I'm old and allowed some paranoia !
 	brw
 	dt	0x00,0x03,0x06,0x09,0x0c,0x10,0x13,0x16
 	dt	0x19,0x1c,0x1f,0x22,0x25,0x28,0x2b,0x2e

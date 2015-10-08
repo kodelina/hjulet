@@ -19,3 +19,4 @@ installasjon av programvare
 
 > sudo apt-get install synaptic
 Grafisk pakkebehandler
+- avslutter - krever bedre internett-kapasitet (og pi2)
