@@ -5,6 +5,10 @@
      var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna, .torving, .hoya, .seifiske, .hosting, .sildefiske, .poteter, .produksjon, .slakting' );
      
      //Vis og skjul språk
+    
+    $( languages ).hide();
+    $('.lang-no').fadeIn('slow'); // Default språk
+    $('#lang-no').css('opacity', '1'); // Norsk språkikon
 	
 	$('#lang-no').click(function(){
 		$( languages ).hide();
