@@ -149,4 +149,13 @@
     	$('.info').removeClass('slide-out');
 	});
 	
+	$.idleTimer(120000);
+
+
+    $(document).bind("idle.idleTimer", function(){
+     window.location.href = "index.html";
+    });
+
+
+	
 });
