@@ -264,7 +264,8 @@
         background: url(images/bubble1_blue.svg) no-repeat;
         width: 294px;
         height: 307px;
-        animation: scale ease 20s infinite;
+        -webkit-transform: scale(0.9);
+        animation: scalee ease 15s infinite;
         top: 306px;
         left: 1400px;
         padding: 90px 40px 0 30px;
