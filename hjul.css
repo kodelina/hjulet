@@ -288,11 +288,15 @@
         position: absolute;
         top: 200px;
         left: 70px;
-        width: 700px;
+        width: 800px;
         height: 800px;
         padding: 10px;
+        overflow-x: hidden;
         overflow-y: auto;
         color: #999;
+    }
+    .object-text p {
+        width: 700px;
     }
     .object-text ul {
         margin-top: 20px;
@@ -304,7 +308,6 @@
         font-weight: normal;
         color: #6a86a8;
         margin-bottom: 30px;
-        width: 800px;
     }
     body.april .object-text h1, body.mai .object-text h1, body.juni .object-text h1, body.juli .object-text h1 {
         color: #99b894;
