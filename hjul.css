@@ -102,7 +102,7 @@
         margin: 0 auto;
     }
     .spin img, .screensaver-spin img {
-        -webkit-animation-name:             rotate; 
+        -webkit-animation-name:             antiClockwiseSpin; 
         -webkit-animation-duration:         50s; 
         -webkit-animation-iteration-count:  infinite;
         -webkit-animation-timing-function:  linear;
