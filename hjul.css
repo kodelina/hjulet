@@ -88,15 +88,22 @@
       height: 100%;
     }
     /* Hjul - animasjon */
+    .screensaver-spin {
+        padding-top: 80px;
+        padding-left: 200px;
+        width:  992px;
+        height: 992px;
+        margin: 0 auto;
+    }
     .spin {
         padding-top: 44px;
         width:  992px;
         height: 992px;
         margin: 0 auto;
     }
-    .spin img {
+    .spin img, .screensaver-spin img {
         -webkit-animation-name:             rotate; 
-        -webkit-animation-duration:         6s; 
+        -webkit-animation-duration:         50s; 
         -webkit-animation-iteration-count:  infinite;
         -webkit-animation-timing-function:  linear;
     }
@@ -370,7 +377,7 @@
         margin-right: 0;
     }
     section h1 {
-        font-family: "conduit_itclight", sans-serif;
+/*      font-family: "conduit_itclight", sans-serif; */
         position: absolute;
         width: 100%;
         bottom: 35px;
