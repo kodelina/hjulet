@@ -1,5 +1,9 @@
  $(document).ready(function(){
      
+    $(this).bind("contextmenu", function(e) {
+        e.preventDefault();
+    });
+     
      var languages = $( '.lang-no, .lang-en, .lang-sa, .lang-kv' );
      var languageButtons = $( '#lang-no, #lang-en, #lang-sa, #lang-kv' );
      var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna, .torving, .hoya, .seifiske, .hosting, .sildefiske, .poteter, .produksjon, .slakting' );
