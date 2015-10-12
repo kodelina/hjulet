@@ -386,40 +386,40 @@
         left: 70px; 
     }
     h1.februar {
-        left: 200px; 
+        left: 190px; 
     }
     h1.mars {
-        left: 350px; 
+        left: 310px; 
     }
     h1.april {
-        left: 500px; 
+        left: 440px; 
     }
     h1.mai {
-        left: 650px; 
+        left: 570px; 
     }
     h1.juni {
-        left: 800px; 
+        left: 700px; 
     }
     h1.juli {
-        left: 950px; 
+        left: 830px; 
     }
     h1.august {
-        left: 1100px; 
+        left: 960px; 
     }
     h1.september {
-        left: 1250px; 
+        left: 1090px; 
     }
     h1.oktober {
+        left: 1220px; 
+    }
+    h1.november {
         left: 1350px; 
     }
     h1.november {
         left: 1470px; 
     }
-    h1.november {
-        left: 1590px; 
-    }
     h1.desember {
-        left: 1710px; 
+        left: 1600px; 
     }
     body.januar section, body.februar section, body.mars section, body.november section, body.desember section {
         height: 1040px;
@@ -440,6 +440,7 @@
         background: #67BEEB;
         text-transform: uppercase;
         color: #fff;
+        font-weight: normal;
     }
     section h1 span:after {
         content: '';
