@@ -196,6 +196,8 @@
         background: url(images/bubble1.svg) no-repeat;
         width: 294px;
         height: 307px;
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scale ease 20s infinite;
         top: 116px;
         left: 249px;
@@ -233,6 +235,8 @@
         height: 426px;
         top: 500px;
         left: 1304px;
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scale ease 25s infinite;
         padding-top: 190px;
     }
