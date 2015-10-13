@@ -27,6 +27,9 @@
         font-size: 1.4rem;
         line-height: 2rem;
         background-color: #67BEEB;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
     }
     /* Bakgrunner for måneder */
     body.home {
@@ -106,6 +109,14 @@
         -webkit-animation-duration:         50s; 
         -webkit-animation-iteration-count:  infinite;
         -webkit-animation-timing-function:  linear;
+        -moz-animation-name:             antiClockwiseSpin; 
+        -moz-animation-duration:         50s; 
+        -moz-animation-iteration-count:  infinite;
+        -moz-animation-timing-function:  linear;
+        animation-name:             antiClockwiseSpin; 
+        animation-duration:         50s; 
+        animation-iteration-count:  infinite;
+        animation-timing-function:  linear;
     }
     /* Meny for språk */
     .menu {
@@ -195,6 +206,8 @@
         width: 365px;
         height: 428px;
         -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scalee ease 10s infinite;
         top: 63px;
         left: 1000px;
@@ -209,6 +222,8 @@
         top: 450px;
         left: 204px;
         -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scalee ease 15s infinite;
         padding: 130px 60px 0 30px;
     }
@@ -228,6 +243,8 @@
         top: 5px;
         left: 600px;
         -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scalee ease 10s infinite;
         padding: 190px 60px 0 40px;
     }
@@ -243,6 +260,8 @@
         width: 294px;
         height: 307px;
         -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scalee ease 15s infinite;        
         top: 206px;
         left: 249px;
@@ -253,6 +272,8 @@
         width: 390px;
         height: 373px;
         -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scalee ease 15s infinite;
         top: 500px;
         left: 700px;
@@ -263,6 +284,8 @@
         width: 294px;
         height: 307px;
         -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
         animation: scalee ease 15s infinite;
         top: 306px;
         left: 1400px;
@@ -279,6 +302,8 @@
         position: fixed;
         z-index: 2;
         -webkit-transition: margin 0.2s ease-in-out;
+        -moz-transition: margin 0.2s ease-in-out;
+        transition: margin 0.2s ease-in-out;
     }
     .slide-out {
        margin-left: -55% !important; 
@@ -293,15 +318,19 @@
         overflow-x: hidden;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
+        -moz-overflow-scrolling: touch;
+        overflow-scrolling: touch;
         font-size: 1.4rem;
         color: #999;
     }
-    .object-text::-webkit-scrollbar { 
+    .object-text::-webkit-scrollbar, .object-text::-moz-scrollbar { 
         display: none; 
     }
     .object-text p {
         width: 700px;
-/*         -webkit-text-stroke: 0.5px; */
+    }
+    .object-text p + p {
+        margin-top: 20px;
     }
     .object-text ul {
         margin-top: 20px;
@@ -334,12 +363,16 @@
         position: fixed;
         z-index: 1;
         -webkit-transition: margin 0.2s ease-in-out;
+        -moz-transition: margin 0.2s ease-in-out;
+        transition: margin 0.2s ease-in-out;
     }
     .old-image {
         width:1920px;
         height: 100%;
         margin-left: 800px;
         -webkit-transition: margin 0.2s ease-in-out;
+        -moz-transition: margin 0.2s ease-in-out;
+        transition: margin 0.2s ease-in-out;
     }
     .slide-in {
         margin-left: 0;
