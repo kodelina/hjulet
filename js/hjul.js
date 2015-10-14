@@ -153,8 +153,71 @@
     	$('.info').removeClass('slide-out');
 	});
 	
-	$.idleTimer(120000);
-
+	// Detect key press
+	
+    $(document).keypress(function(e) {
+        if(e.which == 97) {
+            window.location.href = "januar.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 98) {
+            window.location.href = "februar.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 99) {
+            window.location.href = "mars.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 100) {
+            window.location.href = "april.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 101) {
+            window.location.href = "mai.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 102) {
+            window.location.href = "juni.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 103) {
+            window.location.href = "juli.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 104) {
+            window.location.href = "august.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 105) {
+            window.location.href = "september.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 106) {
+            window.location.href = "oktober.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 107) {
+            window.location.href = "november.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 108) {
+            window.location.href = "desember.html";
+        }
+    });	
+    
+    $.idleTimer(120000);
+    
 
     $(document).bind("idle.idleTimer", function(){
      window.location.href = "index.html";
