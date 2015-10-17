@@ -327,8 +327,9 @@
         font-size: 1.4rem;
         color: #999;
     }
-    .object-text::-webkit-scrollbar, .object-text::-moz-scrollbar { 
-        display: none; 
+    .object-text::-webkit-scrollbar { 
+        display: none !important;
+        width: 0 !important; 
     }
     .object-text p {
         width: 700px;
