@@ -1,28 +1,46 @@
  $(document).ready(function(){
      
+    $(this).bind("contextmenu", function(e) {
+        e.preventDefault();
+    });
+     
      var languages = $( '.lang-no, .lang-en, .lang-sa, .lang-kv' );
+     var languageButtons = $( '#lang-no, #lang-en, #lang-sa, #lang-kv' );
      var activityTexts = $( '.forb_lofotfiske, .lofotfiske, .hjemmefiske, .forb_finnmarksfiske, .finnmarksfiske, .vaarknipe, .lamming, .vaaronna, .torving, .hoya, .seifiske, .hosting, .sildefiske, .poteter, .produksjon, .slakting' );
      
      //Vis og skjul språk
+    
+    $( languages ).hide();
+    $('.lang-no').fadeIn('slow'); // Default språk
+    $('#lang-no').css('opacity', '1'); // Norsk språkikon
 	
 	$('#lang-no').click(function(){
 		$( languages ).hide();
 		$('.lang-no').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
 	});
 	
 	$('#lang-en').click(function(){
 		$( languages ).hide();
 		$('.lang-en').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
+
 	});
 	
 	$('#lang-sa').click(function(){
 		$( languages ).hide();
 		$('.lang-sa').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
 	});
 	
 		$('#lang-kv').click(function(){
 		$( languages ).hide();
 		$('.lang-kv').fadeIn('slow');
+		$( languageButtons ).css('opacity', '.5');
+		$(this).css('opacity', '1');
 	});
 	
 	// Bobler - Aktiviteter 
@@ -134,5 +152,77 @@
     	$('.old-image').removeClass('slide-in');
     	$('.info').removeClass('slide-out');
 	});
+	
+	// Detect key press
+	
+    $(document).keypress(function(e) {
+        if(e.which == 97) {
+            window.location.href = "januar.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 98) {
+            window.location.href = "februar.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 99) {
+            window.location.href = "mars.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 100) {
+            window.location.href = "april.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 101) {
+            window.location.href = "mai.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 102) {
+            window.location.href = "juni.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 103) {
+            window.location.href = "juli.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 104) {
+            window.location.href = "august.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 105) {
+            window.location.href = "september.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 106) {
+            window.location.href = "oktober.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 107) {
+            window.location.href = "november.html";
+        }
+    });    
+    $(document).keypress(function(e) {
+        if(e.which == 108) {
+            window.location.href = "desember.html";
+        }
+    });	
+    
+    $.idleTimer(120000);
+    
+
+    $(document).bind("idle.idleTimer", function(){
+     window.location.href = "index.html";
+    });
+
+
 	
 });

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="hjul.css" />
   <link rel="stylesheet" href="animations.css">
   <script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/idle-timer.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/hjul.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="september">
@@ -42,6 +43,26 @@
                 <p>Hjemmefisket foregår langs kysten og fjordene i nærheten av hjemstedet. Det kan være et alternativ til det å reise på sesongfisket til Lofoten eller Finnmark. Hjemmefisket er ikke bare orientert mot salg, men skaffer også mat til familien.</p>
                 <p>Tradisjonelt er hjemmefisket delt i 4 sesonger – vinterfisket, vårfisket, sommerfisket og høstfisket. Sommerfisket var omfattende og viktigst, og som basis lå pomorhandelen. Om høsten var fisket etter feitsild det største.Når fisket ble drevet nært hjemmet var ikke behovet for utstyr så stort og investeringene ble mindre. Hjemmefisket var derfor ikke så ressurskrevende som de store sesongfiskeriene.</p>
             </div>        
+        </div>
+        
+        <div class="object-text lang-sa">
+            <div class="poteter"> 
+                <h1>Buđeittat ja ruotnasat váldin</h1>
+                <p>Čakčamánu lei áigi buđeittaid váldit. Dábáleamos buđetšlájat ledje “gulløye” ja “mandel”. Mánáin lei buđetluopmu nu ahte sii vehke buđetbargguin. Sullii seammás válde maid eará ruotnasiid, fiskesruohttsiid ja návrašiid. Sii balle buollašat galge billistit ruotnasiid ovdalgo  olle váldit daid. Sii vurke ruotnasiid sevdnjes ja gálbma lanjain, dávjá gealláriin gos eai lean buolašgrádat.</p>
+            </div>
+            <div class="sildefiske"> 
+                <h1>Sallitbivdu</h1>
+                <p>Borgemánu loahpas ja čakčamánu álgus, ihte sallidat vuonaide. Sallitfierpmit gárvvistuvvojedje, ja valjit sallidat darvánedje. Sii basse varas buoiddes sallidiid  maid borre ovddas buđeittaiguin. Muhto ollo sallidat sáltejuvvojedje dutnariidda. Sii maiddai suovastedje sallidiid gaskasa suovain. Sii bidje sallida dutnariidda, vuorkái sierra lanjaide dahje fiervábuvddaide/-buvrriide.</p>
+            </div>
+            <div class="hosting"> 
+                <h1>Muorjin</h1>
+                <p>Go muorjjit ládde, sii lubme, čogge sarridiid ja joŋaid. Sii ráhkadedje measttu dahje sákta ja veahá murjiid sii vuvde giehmánnái. Lei dábálaš nisson- ja mánáid bargu murjet.</p>
+            </div>  
+            <div class="hjemmefiske"> 
+                <h1>Ruovttoguollebivdu</h1>
+                <p>Ruovttobivdu lea bivdu riđđogovluin ja vuonain ruovttu  (siidda) lahka. Sáhttá leat molssu eaktu dasa ahte mannat  Lofuhtii  dahje Finnmárkui. Ruovttobivdu ii leat dušše dan váras ahte vuovdit guoli, muohtu lea maid borramuššan bearašii.</p>
+                <p>Árbevirolaččat juhkkojuvvo ruovttoguollebivdu 4 áigodahkii – dálve-, giđđa-, geasse- ja čakčabivdu. Geassebivdu lei deháleamos. Sivvan dasa lei “pomor” gávppašeapmi. Čakčat lei buoiddessallitbivdu. Go bivde ruvtto dahje siidda lahka, ii lean dárbu nu ollu golahit go dárbbut ledje unnit. Ruovttubivdu ii gáibidan nu ollu návccaid go dat stuora áigodatguolástusat.</p>
+            </div>         
         </div>
         
         <div class="object-text lang-en">
@@ -80,7 +101,7 @@
         <ul class="bubbles">
             <li id="poteter" class="bubble">
                 <label for="offcanvas" class="toggler">
-                    <p class="lang-sa">Samisk</p>
+                    <p class="lang-sa">Buđeittat ja ruotnasat váldin</p>
                     <p class="lang-kv">Kvensk</p>
                     <p class="lang-en">Potato and vegetable harvest</p>
                     <p class="lang-no">Potet og grønnsaker tas opp</p>
@@ -88,7 +109,7 @@
             </li>
             <li id="hosting" class="bubble">
                 <label for="offcanvas" class="toggler">
-                    <p class="lang-sa">Samisk</p>
+                    <p class="lang-sa">Muorjin</p>
                     <p class="lang-kv">Kvensk</p>
                     <p class="lang-en">Berry harvesting</p>
                     <p class="lang-no">Høsting av bær</p>
@@ -96,7 +117,7 @@
             </li>
             <li id="hjemmefiske" class="bubble">
                 <label for="offcanvas" class="toggler">
-                   <p class="lang-sa">Samisk</p>
+                   <p class="lang-sa">Ruovttoguollebivdu</p>
                    <p class="lang-kv">Kvensk</p>
                    <p class="lang-en">In-shore fishing</p>
                    <p class="lang-no">Hjemmefiske for de som ikke er på sesongfiske</p>
@@ -104,14 +125,14 @@
             </li>
             <li id="sildefiske" class="bubble">
                 <label for="offcanvas" class="toggler">
-                   <p class="lang-sa">Samisk</p>
+                   <p class="lang-sa">Sallitbivdu</p>
                    <p class="lang-kv">Kvensk</p>
                    <p class="lang-en">Herring fishing</p>
                    <p class="lang-no">Sildefiske</p>
                 </label>
             </li>
         </ul>
-        <h1 class="september"><span>September</span></h1>
+        <h1 class="september"><span class="lang-no">September</span><span class="lang-en">September</span><span class="lang-sa">Čakčamánnu</span><span class="lang-kv">Septemperikuu</span></h1>
     </section>
 
   </div>
