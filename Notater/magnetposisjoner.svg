@@ -32,11 +32,11 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-bbox="true"
-     inkscape:window-width="1360"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="604"
+     inkscape:window-height="617"
+     inkscape:window-x="699"
+     inkscape:window-y="42"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -76,21 +76,21 @@
        d="m 376.79083,480.35169 -212.59843,0"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450"
        cx="-340.01068"
        cy="-480.51129"
        r="5.3149605"
        transform="scale(-1,-1)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7"
        cx="-290.40436"
        cy="-480.51129"
        r="5.3149605"
        transform="scale(-1,-1)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4"
        cx="-240.79807"
        cy="-480.51129"
@@ -109,7 +109,7 @@
        id="path3446-4"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-0"
        cx="413.57098"
        cy="480.51132"
@@ -121,7 +121,7 @@
        cy="480.51132"
        r="5.3149605" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-3"
        cx="512.78357"
        cy="480.51132"
@@ -138,21 +138,21 @@
        d="M 376.87064,480.37313 192.75499,374.07391"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-73"
        cx="-529.78595"
        cy="-227.73962"
        r="5.3149605"
        transform="matrix(-0.8660254,-0.5,0.5,-0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-6"
        cx="-480.17966"
        cy="-227.73962"
        r="5.3149605"
        transform="matrix(-0.8660254,-0.5,0.5,-0.8660254,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4-5"
        cx="-430.57333"
        cy="-227.73962"
@@ -171,7 +171,7 @@
        id="path3446-4-4"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-0-2"
        cx="603.34625"
        cy="227.73959"
@@ -185,7 +185,7 @@
        r="5.3149605"
        transform="matrix(0.8660254,0.5,-0.5,0.8660254,0,0)" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-7-4-3-6"
        cx="702.55884"
        cy="227.73959"
@@ -204,7 +204,7 @@
        d="M 376.92902,480.43153 270.62981,296.31588"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-06"
        cx="-567.75024"
        cy="86.054726"
@@ -270,7 +270,7 @@
        d="m 376.95041,480.51133 0,-212.59843"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#ff0000"
+       style="fill:#000000"
        id="path3450-8"
        cx="-443.73117"
        cy="376.7908"
@@ -336,7 +336,7 @@
        d="M 376.92909,480.59114 483.22831,296.47549"
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92824572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-2"
        cx="-190.95943"
        cy="566.5661"
@@ -350,7 +350,7 @@
        r="5.3149605"
        transform="matrix(0.5,-0.8660254,0.8660254,0.5,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4-2"
        cx="-91.746826"
        cy="566.5661"
@@ -435,7 +435,7 @@
        id="path3446-4-7"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-0-08"
        cx="122.83493"
        cy="604.5304"
@@ -449,7 +449,7 @@
        r="5.3149605"
        transform="matrix(0.8660254,-0.5,0.5,0.8660254,0,0)" />
     <circle
-       style="fill:#000000"
+       style="fill:#ff0000"
        id="path3450-7-4-3-9"
        cx="222.04753"
        cy="604.5304"
