@@ -194,14 +194,15 @@
     }
     .bubble:first-child {
         background: url(images/bubble1.svg) no-repeat;
-        width: 294px;
-        height: 307px;
+        width: 361px;
+        height: 424px;
         -moz-transform: scale(0.9);
-        transform: scale(0.9);
-        animation: scale ease 20s infinite;
+        transform: scale(1);
+        animation: scale ease 15s infinite;
         top: 116px;
         left: 249px;
-        padding: 90px 40px 0 30px;
+        padding: 90px 70px 0 10px;
+        font-size: 1.5rem;
     }
     .bubble:nth-child(2) {  
         background: url(images/bubble2.svg) no-repeat;
@@ -213,7 +214,7 @@
         animation: scalee ease 10s infinite;
         top: 63px;
         left: 1000px;
-        padding: 120px 60px 0 30px;
+        padding: 120px 50px 0 40px;
         font-size:1.8rem;
         line-height:2.2rem;
     }
@@ -235,9 +236,9 @@
         height: 426px;
         top: 500px;
         left: 1304px;
-        -moz-transform: scale(0.9);
-        transform: scale(0.9);
-        animation: scale ease 25s infinite;
+        -moz-transform: scale(1);
+        transform: scale(1);
+        animation: scale ease 10s infinite;
         padding-top: 190px;
     }
     .bubble:nth-child(5) {
@@ -282,6 +283,7 @@
         top: 500px;
         left: 700px;
         padding: 120px 60px 0 30px;
+        font-size: 1.7rem;  
     }
     body.desember .bubble:nth-child(3), body.februar .bubble:nth-child(3) {
         background: url(images/bubble1_blue.svg) no-repeat;
@@ -294,6 +296,7 @@
         top: 306px;
         left: 1400px;
         padding: 90px 40px 0 30px;
+        font-size: 1.6rem;
     }
 
     /* Tekstpanel */
