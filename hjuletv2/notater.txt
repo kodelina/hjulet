@@ -1,0 +1,79 @@
+Forberede ny hardware
+---------------------
+kutte nye kabler, 6cm forskjell i lengde pr (sjekk dette!) og lodde på formotstand og sensor.
+krympestrømpe på sensor-siden av kabler - fantasifull fargekoding (svart, brun, rød, oransje for 0, 1, 2, 3 og blå for Gnd, hvit for Vcc)
+Lage og lodde på 7-pins kontakt til usb-dingsen med snu-sikker løsning (pin mangler, hull fylt)
+Sjekk at siste versjon av "hjulet" ligger på bærbar pc for testing
+
+Dokumentere ny løsning
+----------------------
+skjema og fargekoder, beskrivelse av grensesnittet mellom sensor og usb-dings
+
+Oppgradering av hardware fra v1 (reversert spenning, antakelig defekt) til v2
+-----------------------------------------------------------------------------
+Kople fra usb, kutt all teip, skrap bort smelteplast. Ta vare på gammelt i tilfelle ..
+
+Smelte på plass nye sensorer og ledninger. Bruk strips/smelteplast til festing. 
+Kutt ledninger i passende lengder, tre på krympestrømpe, lodde på 7-pins kontakt og stram.
+Plugg inn ny usb-enhet, kople sammen sensorer og usb-enhet.
+Test med multimeter, så på frittstående pc. 
+
+Kople til lokalt nettverk
+installere teamviewer
+sende teamviewer-info til Kalina
+
+Husk
+----
+- smeltepistol og teip
+- epoxy, hvis støtter brekker løs
+- strips, krympestrømpe
+- tenger, loddebolt og tinn
+- gasslighter
+- bærbar pc, muligens omprogrammering av måneder om ikke match, og testing før tilkopling
+- verktøy til demontering av hjul-skiven ?
+
+Ny software på usb-enhet (AVR 32u4):
+------------------------------------
+
+// hjulet v2 - les inn fire bits som verdi, og sammenlign med forrige
+// dersom endring, send bokstaven som tastetrykk
+
+//#include <keyboard.h>  // core component?
+
+#define FILTER_COUNT 5  // glitch-remover, make sure not too long wait ..
+#define KEY_A 97
+
+typedef unsigned char byte;
+
+byte lastValue, filter, current, sent;
+
+const char *lookup = "abcdefghijklllaa";
+
+void setup() {
+  lastValue = 255 ; // make sure first reading results in a difference
+  filter = FILTER_COUNT ;
+  sent = 0 ;
+  Keyboard.begin();
+}
+
+void loop() {
+ current = PORTD & 0x0f ; // read D0:D3
+ if(current != lastValue)
+ {
+    filter = FILTER_COUNT ;
+    sent = 0 ;
+ }
+ else
+ {
+    if(filter > 0)
+      filter-- ;
+    else
+      if(!sent)
+      {
+        sent = 1;
+        Keyboard.write(current + KEY_A);
+        // Keyboard.write(lookup[current]);  // if remapping is needed ..
+      }
+ }
+ delay(50); 
+}
