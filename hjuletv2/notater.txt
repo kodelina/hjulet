@@ -1,6 +1,6 @@
 Forberede ny hardware
 ---------------------
-kutte nye kabler, 6cm forskjell i lengde pr (sjekk dette!) og lodde på formotstand og sensor.
+kutte nye kabler, 10cm forskjell i lengde pr og lodde på formotstand og sensor.
 krympestrømpe på sensor-siden av kabler - fantasifull fargekoding (svart, brun, rød, oransje for 0, 1, 2, 3 og blå for Gnd, hvit for Vcc)
 Lage og lodde på 7-pins kontakt til usb-dingsen med snu-sikker løsning (pin mangler, hull fylt)
 Sjekk at siste versjon av "hjulet" ligger på bærbar pc for testing
